@@ -217,20 +217,21 @@ sections.css
 
 }
 
-
 /* ====================================================
-   ARTIST SECTION
+   ABOUT ROC-MAN
 ==================================================== */
 
 .artist{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:420px 1fr;
 
     gap:70px;
 
     align-items:center;
+
+    margin-top:70px;
 
 }
 
@@ -240,6 +241,10 @@ sections.css
 
     overflow:hidden;
 
+    border:1px solid var(--color-border);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
 }
 
 .artist-image img{
@@ -248,11 +253,35 @@ sections.css
 
     display:block;
 
+    transition:transform .5s ease;
+
+}
+
+.artist-image:hover img{
+
+    transform:scale(1.03);
+
+}
+
+.artist-text{
+
+    color:var(--color-text-light);
+
 }
 
 .artist-text p{
 
     text-align:left;
+
+    margin-bottom:25px;
+
+    line-height:1.9;
+
+}
+
+.artist-text strong{
+
+    color:var(--color-gold);
 
 }
 
