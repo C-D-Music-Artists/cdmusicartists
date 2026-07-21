@@ -1,92 +1,328 @@
-*{
+/*
+====================================================
+
+C.D. Music Artists
+Website Version 3.0
+
+Milestone 1 – Foundation
+
+Datei:
+style.css
+
+Author:
+Charly Drössler
+
+====================================================
+*/
+
+
+/* ====================================================
+   1. RESET
+==================================================== */
+
+*,
+*::before,
+*::after{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#111;
-    color:white;
+
+/* ====================================================
+   2. ROOT (Design System)
+==================================================== */
+
+:root{
+
+    /* Farben */
+
+    --color-background:#080808;
+    --color-section:#121212;
+    --color-card:#1B1B1B;
+
+    --color-text:#FFFFFF;
+    --color-text-light:#B8B8B8;
+
+    --color-gold:#C8A04B;
+
+    --color-button:#B00020;
+    --color-button-hover:#D62839;
+
+    --color-border:#2A2A2A;
+
+    /* Schriftarten */
+
+    --font-headings:'Cinzel', serif;
+    --font-text:'Poppins', sans-serif;
+
+    /* Größen */
+
+    --max-width:1400px;
+
+    --transition:0.3s ease;
+
 }
 
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#000;
+
+/* ====================================================
+   3. HTML
+==================================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
 }
+
+
+/* ====================================================
+   4. BODY
+==================================================== */
+
+body{
+
+    background:var(--color-background);
+
+    color:var(--color-text);
+
+    font-family:var(--font-text);
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ====================================================
+   5. CONTAINER
+==================================================== */
 
 .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
+
+    width:min(90%, var(--max-width));
+
+    margin:0 auto;
+
 }
 
-.logo img{
-    height:70px;
-    width:auto;
-    display:block;
+
+/* ====================================================
+   6. TYPOGRAPHY
+==================================================== */
+
+h1,h2,h3,h4,h5,h6{
+
+    font-family:var(--font-headings);
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    color:var(--color-text);
+
 }
 
-nav a{
-    color:white;
+h1{
+
+    font-size:clamp(3rem,7vw,6rem);
+
+}
+
+h2{
+
+    font-size:clamp(2rem,4vw,3.2rem);
+
+    margin-bottom:30px;
+
+}
+
+h3{
+
+    font-size:1.5rem;
+
+}
+
+p{
+
+    color:var(--color-text-light);
+
+    margin-bottom:20px;
+
+}
+
+
+/* ====================================================
+   7. LINKS
+==================================================== */
+
+a{
+
     text-decoration:none;
-    margin-left:25px;
+
+    color:inherit;
+
+    transition:var(--transition);
+
 }
 
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(#222,#000);
+
+/* ====================================================
+   8. LISTEN
+==================================================== */
+
+ul{
+
+    list-style:none;
+
 }
 
-.hero h1{
-    font-size:64px;
+
+/* ====================================================
+   9. BILDER
+==================================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
 }
 
-.hero p{
-    margin:20px 0;
-    font-size:24px;
-}
+
+/* ====================================================
+   10. BUTTON
+==================================================== */
 
 .button{
-    background:#ff3333;
-    color:white;
-    padding:15px 35px;
-    text-decoration:none;
-    border-radius:30px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 36px;
+
+    background:var(--color-button);
+
+    color:#ffffff;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
 }
 
-section{
-    padding:100px 40px;
-    max-width:1200px;
-    margin:auto;
+.button:hover{
+
+    background:var(--color-button-hover);
+
+    transform:translateY(-3px);
+
 }
 
-.cards{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+
+/* ====================================================
+   11. SECTION
+==================================================== */
+
+.content-section{
+
+    padding:120px 0;
+
 }
+
+.content-section.dark{
+
+    background:var(--color-section);
+
+}
+
+
+/* ====================================================
+   12. CARD
+==================================================== */
 
 .card{
-    flex:1;
-    min-width:220px;
-    background:#222;
-    padding:50px;
-    text-align:center;
-    border-radius:15px;
+
+    background:var(--color-card);
+
+    border:1px solid var(--color-border);
+
+    border-radius:16px;
+
+    padding:35px;
+
+    transition:var(--transition);
+
 }
 
-footer{
-    background:#000;
-    text-align:center;
-    padding:40px;
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--color-gold);
+
 }
+
+
+/* ====================================================
+   13. GOLD DIVIDER
+==================================================== */
+
+.divider{
+
+    width:120px;
+
+    height:2px;
+
+    background:var(--color-gold);
+
+    margin:30px auto;
+
+}
+
+
+/* ====================================================
+   14. UTILITIES
+==================================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:20px;
+
+}
+
+.mt-2{
+
+    margin-top:40px;
+
+}
+
+.mt-3{
+
+    margin-top:60px;
+
+}
+
+
+/* ====================================================
+   ENDE
+==================================================== */

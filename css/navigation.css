@@ -1,0 +1,207 @@
+/*
+====================================================
+
+C.D. Music Artists
+Website Version 3.0
+
+Milestone 1 – Foundation
+
+Datei:
+navigation.css
+
+====================================================
+*/
+
+
+/* ====================================================
+   HEADER
+==================================================== */
+
+#header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    transition:all .35s ease;
+
+}
+
+
+/* Header nach dem Scrollen */
+
+#header.scrolled{
+
+    background:rgba(8,8,8,.95);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+
+/* ====================================================
+   NAVIGATION
+==================================================== */
+
+.navbar{
+
+    width:min(92%,1400px);
+
+    margin:auto;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+/* ====================================================
+   LOGO
+==================================================== */
+
+.brand{
+
+    font-family:var(--font-headings);
+
+    font-size:1.6rem;
+
+    color:var(--color-text);
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.brand:hover{
+
+    color:var(--color-gold);
+
+}
+
+
+/* ====================================================
+   MENÜ
+==================================================== */
+
+.nav-links{
+
+    display:flex;
+
+    gap:45px;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    color:var(--color-text);
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+
+}
+
+
+/* Goldene Linie */
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--color-gold);
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--color-gold);
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+
+/* ====================================================
+   SPRACHE
+==================================================== */
+
+.language{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:.9rem;
+
+}
+
+.language a{
+
+    color:var(--color-text-light);
+
+}
+
+.language a:hover{
+
+    color:var(--color-gold);
+
+}
+
+.language span{
+
+    color:var(--color-border);
+
+}
+
+
+/* ====================================================
+   MOBILE BUTTON
+==================================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    cursor:pointer;
+
+    font-size:2rem;
+
+    color:white;
+
+}

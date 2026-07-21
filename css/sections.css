@@ -1,0 +1,179 @@
+/*
+====================================================
+
+C.D. Music Artists
+Website Version 3.0
+
+Milestone 1.4 – Sections
+
+Datei:
+sections.css
+
+====================================================
+*/
+
+
+/* ====================================================
+   CONTENT SECTIONS
+==================================================== */
+
+.content-section{
+
+    padding:120px 0;
+
+}
+
+.content-section.dark{
+
+    background:var(--color-section);
+
+}
+
+.content-section h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+.content-section p{
+
+    max-width:800px;
+
+    margin:0 auto 40px;
+
+    text-align:center;
+
+}
+
+
+/* ====================================================
+   LATEST RELEASES
+==================================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+
+/* ====================================================
+   RELEASE CARD
+==================================================== */
+
+.card{
+
+    background:var(--color-card);
+
+    border:1px solid var(--color-border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:all .35s ease;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--color-gold);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+
+/* ====================================================
+   COVER
+==================================================== */
+
+.card-image{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    background:#222;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#666;
+
+    font-size:.9rem;
+
+}
+
+
+/* ====================================================
+   TEXT
+==================================================== */
+
+.card-content{
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+.card-content h3{
+
+    margin-bottom:10px;
+
+}
+
+.card-content p{
+
+    margin-bottom:25px;
+
+    color:var(--color-text-light);
+
+}
+
+
+/* ====================================================
+   BUTTON
+==================================================== */
+
+.card-button{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border:1px solid var(--color-gold);
+
+    border-radius:30px;
+
+    color:var(--color-gold);
+
+    transition:all .3s ease;
+
+}
+
+.card-button:hover{
+
+    background:var(--color-gold);
+
+    color:#080808;
+
+}
