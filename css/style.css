@@ -283,13 +283,13 @@ img{
 
 .divider{
 
-    width:120px;
+    width:240px;
 
     height:2px;
 
     background:var(--color-gold);
 
-    margin:30px auto;
+    margin:20px auto;
 
 }
 

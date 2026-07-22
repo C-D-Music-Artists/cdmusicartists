@@ -93,7 +93,9 @@ hero.css
 
     color:var(--color-text-light);
 
-    margin-bottom:50px;
+    margin-bottom:20px;
+
+}
 
 }
 
@@ -150,25 +152,7 @@ hero.css
    GOLD LINE
 ==================================================== */
 
-.hero::after{
 
-    content:"";
-
-    position:absolute;
-
-    bottom:0;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:220px;
-
-    height:2px;
-
-    background:var(--color-gold);
-
-}
 
 
 /* ====================================================
