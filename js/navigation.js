@@ -8,18 +8,11 @@ navigation.js
 ====================================================
 */
 
-const header = document.getElementById("header");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-window.addEventListener("scroll", () => {
+menuToggle.addEventListener("click", () => {
 
-    if(window.scrollY > 40){
-
-        header.classList.add("scrolled");
-
-    }else{
-
-        header.classList.remove("scrolled");
-
-    }
+    navLinks.classList.toggle("active");
 
 });

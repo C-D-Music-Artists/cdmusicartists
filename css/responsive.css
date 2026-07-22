@@ -32,25 +32,61 @@
 
 
 
-/* ====================================================
-   SMARTPHONE
-==================================================== */
+/* ==========================================
+   MOBILE NAVIGATION
+========================================== */
 
 @media (max-width:768px){
 
+.brand{
+
+    display:none;
+
+}
+
 .navbar{
 
-    flex-direction:column;
+    justify-content:flex-end;
 
-    gap:20px;
+    align-items:center;
+
+}
+
+.menu-toggle{
+
+    display:block;
 
 }
 
 .nav-links{
 
-    flex-wrap:wrap;
+    display:none;
 
-    justify-content:center;
+    position:absolute;
+
+    top:80px;
+
+    left:0;
+
+    width:100%;
+
+    background:#111;
+
+    flex-direction:column;
+
+    padding:30px 0;
+
+    gap:20px;
+
+    text-align:center;
+
+}
+
+.nav-links.active{
+
+    display:flex;
+
+}
 
 }
 
