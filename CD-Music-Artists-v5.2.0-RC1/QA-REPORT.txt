@@ -1,0 +1,30 @@
+C.D. Music Artists v5.2.0 – Release Candidate 1
+
+Automated checks:
+- HTML pages parsed: 6
+- Publication placeholders removed
+- Legal/footer/language links checked
+- Canonical and hreflang links added
+- robots.txt and sitemap.xml added
+- Internal-link issues: 10
+
+Issues:
+- Missing local target in index.html: images/hero/hero-background.png
+- Missing local target in index.html: images/releases/on-my-way.png
+- Missing local target in index.html: images/releases/the-prophecy.png
+- Missing local target in index.html: images/releases/under-two-moons.png
+- Missing local target in index.html: images/artist/roc-man.png
+- Missing local target in de/index.html: ../images/hero/hero-background.png
+- Missing local target in de/index.html: ../images/releases/on-my-way.png
+- Missing local target in de/index.html: ../images/releases/the-prophecy.png
+- Missing local target in de/index.html: ../images/releases/under-two-moons.png
+- Missing local target in de/index.html: ../images/artist/roc-man.png
+
+Images to retain from your local project:
+- images/hero/hero-background.png
+- images/releases/on-my-way.png
+- images/releases/the-prophecy.png
+- images/releases/under-two-moons.png
+- images/artist/roc-man.png
+
+Note: Legal texts are a practical website draft and do not replace individual legal advice.

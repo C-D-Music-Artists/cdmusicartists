@@ -1,0 +1,22 @@
+/*
+====================================================
+C.D. Music Artists - Website Version 5.2.1 RC1
+Datei: legal.css
+====================================================
+*/
+
+.legal-page{padding:calc(var(--header-height) + 72px) 0 96px;background:var(--color-background);}
+.legal-container{width:min(90%,920px);margin-inline:auto;}
+.legal-header{margin-bottom:48px;padding-bottom:28px;border-bottom:1px solid var(--color-border);}
+.legal-header .section-kicker{margin-bottom:12px;}
+.legal-header h1{font-size:clamp(2.4rem,6vw,4.4rem);}
+.legal-content{display:grid;gap:34px;}
+.legal-section{padding:30px;border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-card);}
+.legal-section h2{margin-bottom:18px;font-size:clamp(1.35rem,3vw,1.8rem);}
+.legal-section h3{margin:24px 0 10px;font-size:1.12rem;}
+.legal-section p,.legal-section li{color:var(--color-text-light);}
+.legal-section ul{display:grid;gap:8px;margin:14px 0 0;}
+.legal-section a{color:var(--color-gold);overflow-wrap:anywhere;}
+.legal-placeholder{padding:16px;border:1px dashed var(--color-gold);border-radius:var(--radius-sm);background:rgba(200,160,75,.06);color:var(--color-text);}
+.legal-note{font-size:.88rem;color:#929292;}
+@media(max-width:560px){.legal-page{padding-top:calc(var(--header-height) + 42px)}.legal-section{padding:22px}}
