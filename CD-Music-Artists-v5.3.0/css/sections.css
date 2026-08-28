@@ -2,7 +2,7 @@
 ====================================================
 
 C.D. Music Artists
-Website Version 4.4.0
+Website Version 5.3.0 RC1
 
 Datei:
 sections.css
@@ -329,10 +329,10 @@ sections.css
         transform var(--transition);
 }
 
-.social-link i {
+.social-link .brand-icon {
     width: 20px;
-    font-size: 1.1rem;
-    text-align: center;
+    height: 20px;
+    flex: 0 0 auto;
 }
 
 .social-link:hover {
@@ -405,3 +405,6 @@ sections.css
     right: -180px;
     bottom: 10%;
 }
+
+.platform-button .brand-icon{width:24px;height:24px;}
+.social-link .brand-icon{width:20px;height:20px;flex:0 0 auto;}
