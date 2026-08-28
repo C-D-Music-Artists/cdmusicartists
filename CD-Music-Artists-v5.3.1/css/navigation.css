@@ -1,0 +1,168 @@
+/*
+====================================================
+
+C.D. Music Artists
+Website Version 5.3.1 RC1
+
+Datei:
+navigation.css
+
+====================================================
+*/
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    min-height: var(--header-height);
+    transition:
+        background-color var(--transition),
+        backdrop-filter var(--transition),
+        box-shadow var(--transition);
+}
+
+.site-header.scrolled {
+    background: rgba(8, 8, 8, 0.86);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(92%, var(--max-width));
+    min-height: var(--header-height);
+    margin-inline: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.4rem, 3vw, 3rem);
+}
+
+.nav-menu a {
+    position: relative;
+    padding: 0.5rem 0;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active,
+.nav-menu a[aria-current="page"] {
+    color: var(--color-gold);
+}
+
+.nav-menu a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    margin-inline: auto;
+    background: var(--color-gold);
+    content: "";
+    transition: width var(--transition);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after,
+.nav-menu a[aria-current="page"]::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    color: var(--color-text);
+}
+
+.nav-toggle-lines,
+.nav-toggle-lines::before,
+.nav-toggle-lines::after {
+    display: block;
+    width: 26px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+.nav-toggle-lines {
+    position: relative;
+}
+
+.nav-toggle-lines::before,
+.nav-toggle-lines::after {
+    position: absolute;
+    left: 0;
+    content: "";
+}
+
+.nav-toggle-lines::before {
+    transform: translateY(-8px);
+}
+
+.nav-toggle-lines::after {
+    transform: translateY(8px);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-lines {
+    background: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-lines::before {
+    transform: rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-lines::after {
+    transform: rotate(-45deg);
+}
+
+.navigation-open {
+    overflow: hidden;
+}
+
+
+/* ====================================================
+   LANGUAGE SWITCH
+==================================================== */
+
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 28px;
+    color: var(--color-text-light);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.language-switch a {
+    color: var(--color-text-light);
+}
+
+.language-switch a:hover,
+.language-switch a.active,
+.language-switch a[aria-current="page"] {
+    color: var(--color-gold);
+}
+
+.language-divider {
+    color: var(--color-border);
+}

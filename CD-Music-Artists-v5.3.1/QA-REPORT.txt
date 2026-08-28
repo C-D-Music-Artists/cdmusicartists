@@ -1,0 +1,16 @@
+C.D. Music Artists – Version 5.3.1 RC2
+
+Datenschutz-/Performance-Prüfung:
+- Google Fonts entfernt.
+- Font-Awesome-/cdnjs-Verbindung entfernt.
+- Systemschriftarten verwendet.
+- Spotify- und Facebook-Symbole als eingebettete SVGs umgesetzt.
+- Datenschutzerklärungen in Deutsch und Englisch angepasst.
+- Keine Analyse-, Marketing- oder Tracking-Skripte gefunden.
+- Kein Cookie-Banner erforderlich, solange dieser technische Stand unverändert bleibt.
+- GitHub Pages bleibt Hostinganbieter und verarbeitet beim Abruf technisch notwendige Verbindungsdaten.
+
+Vor Veröffentlichung prüfen:
+- Lokale Bilddateien vollständig vorhanden.
+- Öffentliche Domain in canonical, hreflang und sitemap.xml korrekt.
+- Alle Kontakt- und Adressdaten korrekt.

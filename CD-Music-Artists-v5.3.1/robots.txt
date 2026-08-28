@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://c-d-music-artists.github.io/cdmusicartists/sitemap.xml
