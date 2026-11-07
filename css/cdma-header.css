@@ -66,7 +66,7 @@
 }
 .hero .hero-title {
   position: absolute;
-  left: 50%; top: calc(50% - 34px);
+  left: 50%; top: calc(50% - 17px);
   transform: translate(-50%, -50%);
   width: max-content;
   max-width: min(76vw, 690px);
@@ -157,5 +157,5 @@
 /* C.D. Music Artists um 25 Pixel nach unten verschieben */
 
 .hero h1 {
-    transform: translateY(25px);
+    transform: translateY(55px);
 }
