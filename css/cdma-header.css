@@ -2,7 +2,7 @@
 .hero {
   position: relative;
   min-height: max(850px, 100svh);
-  padding: 120px 20px 90px;
+  padding: 0 20px;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -16,7 +16,7 @@
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("../images/hero/cdma-vinyl-background.png") no-repeat center 28px;
+  background: url("../images/hero/cdma-vinyl-background.png") no-repeat center center;
   background-size: min(900px, 86vw) auto;
   opacity: .82;
 }
@@ -28,38 +28,125 @@
   background: linear-gradient(to bottom, transparent 12%, rgba(0,0,0,.16) 62%, #030303 100%);
   pointer-events: none;
 }
+/* Desktop: Mittelpunkt der Platte = Mittelpunkt des Haupttitels. */
 .hero .hero-content {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  width: min(96%, 1320px);
-  padding-top: 0;
+  width: 100%;
+  max-width: none;
+  padding: 0;
   text-align: center;
+  pointer-events: none;
 }
-/* Eigenständige transparente Grafik statt CSS-Schriftzug */
+.hero .hero-content > * { pointer-events: auto; }
+/* Eigenständiger CDMA-Schriftzug oberhalb des Titels */
 .hero .hero-content::before {
   content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 245px);
+  transform: translateX(-50%);
   display: block;
   width: min(570px, 66vw);
-  height: clamp(75px, 13vw, 190px);
-  margin: 0 auto 12px;
+  height: 155px;
   background: url("../images/hero/cdma-lettering.png") center / contain no-repeat;
   opacity: .73;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,.65));
 }
-.hero .hero-eyebrow { margin-bottom: .85rem; color:#e0b14d; font-size:clamp(.9rem,1.4vw,1.25rem); letter-spacing:.2em; text-shadow:0 2px 12px #000; }
-.hero .hero-title { max-width:none; font-size:clamp(2.5rem,5vw,5.4rem); line-height:1.1; white-space:nowrap; text-wrap:nowrap; letter-spacing:0; text-shadow:0 3px 16px #000; }
-.hero .hero-divider { width:min(650px,70vw); height:3px; margin:1.3rem auto; background:linear-gradient(90deg,transparent,#c99a2d 27%,#fff0b7 50%,#c99a2d 73%,transparent); box-shadow:0 0 14px rgba(236,163,35,.65); }
-.hero .hero-tagline { max-width:100%; color:#f4f4f4; font-size:clamp(1rem,1.6vw,1.4rem); text-shadow:0 2px 12px #000; }
-.hero .hero-actions { margin-top:1.8rem; }
+.hero .hero-eyebrow {
+  position: absolute;
+  left: 0; right: 0;
+  top: calc(50% - 93px);
+  margin: 0;
+  color: #e0b14d;
+  font-size: clamp(.9rem,1.4vw,1.25rem);
+  letter-spacing: .2em;
+  text-shadow: 0 2px 12px #000;
+}
+.hero .hero-title {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: 96%;
+  margin: 0;
+  font-size: clamp(2.5rem,5vw,5.4rem);
+  line-height: 1.1;
+  white-space: nowrap;
+  letter-spacing: 0;
+  text-shadow: 0 3px 16px #000;
+}
+.hero .hero-divider {
+  position: absolute;
+  left: 50%; top: calc(50% + 65px);
+  transform: translateX(-50%);
+  width: min(650px,70vw);
+  height: 3px;
+  margin: 0;
+  background: linear-gradient(90deg,transparent,#c99a2d 27%,#fff0b7 50%,#c99a2d 73%,transparent);
+  box-shadow: 0 0 14px rgba(236,163,35,.65);
+}
+.hero .hero-tagline {
+  position: absolute;
+  top: calc(50% + 97px);
+  left: 0; right: 0;
+  margin: 0;
+  max-width: 100%;
+  color: #f4f4f4;
+  font-size: clamp(1rem,1.6vw,1.4rem);
+  text-shadow: 0 2px 12px #000;
+}
+.hero .hero-actions {
+  position: absolute;
+  top: calc(50% + 158px);
+  left: 0; right: 0;
+  margin: 0;
+}
+/* Auf kleinen Displays zurück zu flexiblem Layout. */
 @media (max-width:760px) {
-  .hero { min-height:760px; padding:105px 16px 85px; }
-  .hero::before { background-size:min(650px,125vw) auto; background-position:center 95px; }
-  .hero .hero-content { width:100%; }
-  .hero .hero-content::before { width:min(440px,80vw); height:clamp(70px,20vw,130px); }
-  .hero .hero-title { font-size:clamp(2.1rem,8vw,4.2rem); white-space:normal; text-wrap:balance; }
-  .hero .hero-divider { margin:1.1rem auto; }
+  .hero { min-height: 760px; padding: 120px 16px 80px; }
+  .hero::before {
+    background-size: min(650px, 125vw) auto;
+    background-position: center 100px;
+  }
+  .hero .hero-content {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .hero .hero-content::before,
+  .hero .hero-eyebrow,
+  .hero .hero-title,
+  .hero .hero-divider,
+  .hero .hero-tagline,
+  .hero .hero-actions {
+    position: static;
+    transform: none;
+    left: auto; right: auto; top: auto;
+  }
+  .hero .hero-content::before {
+    width: min(440px,80vw);
+    height: clamp(70px,20vw,130px);
+    margin: 0 auto 12px;
+  }
+  .hero .hero-eyebrow { margin-bottom: .85rem; }
+  .hero .hero-title {
+    width: auto;
+    max-width: 100%;
+    font-size: clamp(2.1rem,8vw,4.2rem);
+    white-space: normal;
+    text-wrap: balance;
+  }
+  .hero .hero-divider { margin: 1.1rem auto; }
+  .hero .hero-actions { margin-top: 1.8rem; }
 }
 @media (max-width:420px) {
-  .hero .hero-eyebrow { letter-spacing:.1em; }
-  .hero .hero-title { font-size:clamp(2rem,9vw,3.1rem); }
+  .hero .hero-eyebrow { letter-spacing: .1em; }
+  .hero .hero-title { font-size: clamp(2rem,9vw,3.1rem); }
 }
