@@ -28,7 +28,7 @@
   background: linear-gradient(to bottom, transparent 12%, rgba(0,0,0,.16) 62%, #030303 100%);
   pointer-events: none;
 }
-/* Desktop: Mittelpunkt der Platte = Mittelpunkt des Haupttitels. */
+/* Desktop: Plattenmitte als Referenz; optische Schriftmitte um 12px angehoben. */
 .hero .hero-content {
   position: absolute;
   inset: 0;
