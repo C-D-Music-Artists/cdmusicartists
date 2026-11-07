@@ -66,12 +66,12 @@
 }
 .hero .hero-title {
   position: absolute;
-  left: 50%; top: calc(50% - 24px);
+  left: 50%; top: calc(50% - 34px);
   transform: translate(-50%, -50%);
   width: max-content;
-  max-width: 82%;
+  max-width: min(76vw, 690px);
   margin: 0;
-  font-size: clamp(2.25rem,4vw,4.45rem);
+  font-size: clamp(2rem, 3.15vw, 3.55rem);
   line-height: 1.1;
   white-space: nowrap;
   letter-spacing: 0;
