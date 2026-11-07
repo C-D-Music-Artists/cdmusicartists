@@ -153,3 +153,9 @@
 
 /* Scroll-Hinweis nicht über dem unteren Plattenrand anzeigen. */
 .hero .hero-scroll { display: none; }
+
+/* C.D. Music Artists um 25 Pixel nach unten verschieben */
+
+.hero h1 {
+    transform: translateY(25px);
+}
