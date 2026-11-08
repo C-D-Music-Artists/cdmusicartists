@@ -274,3 +274,12 @@ p {
         display: none;
     }
 }
+
+/* ROC-Man artist website links – desktop and mobile */
+.artist-image-link { display: block; border-radius: inherit; overflow: hidden; }
+.artist-image-link img { width: 100%; }
+.artist-website-action { margin: 24px 0; }
+.artist-website-button { max-width: 100%; text-align: center; }
+@media (max-width: 600px) {
+  .artist-website-button { width: 100%; padding-inline: 16px; }
+}
